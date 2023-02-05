@@ -13,9 +13,11 @@ def resultado():
     cantComp = int(request.form.get("cantComp"))
     persona=str(request.form.get("txtNombre"))
     rbt = request.form.get("rbt")
+    maxBol = cantComp*7
     res = 0
     desc=0
-    if(cantBol < 8):
+
+    if(cantBol <= maxBol):
         if(rbt == 'radioS'):
             if(cantBol > 5):
                 desc=0.25
